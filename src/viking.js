@@ -15,7 +15,6 @@ class Soldier {
 
 }
 
-
 // Viking
 class Viking extends Soldier {
   constructor (name, health, strength) {
@@ -35,9 +34,7 @@ class Viking extends Soldier {
   battleCry(){
     return 'Odin Owns You All!';
   }
-
 }
-
 
 // Saxon
 class Saxon extends Soldier {
@@ -52,9 +49,7 @@ class Saxon extends Soldier {
       return `A Saxon has died in combat`;
     }
   }
-
 }
-
 
 // War
 class War {
@@ -65,36 +60,26 @@ class War {
   addViking(Viking){
     this.vikingArmy.push(Viking);
   }
-  
   addSaxon(Saxon){
     this.saxonArmy.push(Saxon);
   }
   
-  vikingAttack(){
-// Saxon.receiveDamage = function { saxonArmy[Saxon.health] -= vikingArmy[Viking.strength]}
 
-// this.saxonArmy[0].receiveDamage(this.vikingArmy[0].strength) 
-
-// Y si en ese array pones Math.floor(this.saxonArmy * Math.random)?
-
-
-  this.saxonArmy[0].receiveDamage(this.vikingArmy[0].strength);
-  this.saxonArmy.health === 0;
-  this.saxonArmy.shift(Saxon);
-
-
-
-    /* if (Saxon.damage = Viking.strength){
-      Saxon.receiveDamage();
+/* Ale, me podrías ayudar con este método, por fa? No le acabo de entender y obviamente no me sale tampoco... */
+  vikingAttack(){ 
+    let randomSaxon = this.saxonArmy[Math.floor(Math.random()*this.saxonArmy.length)];
+    let randomViking = this.vikingArmy[Math.floor(Math.random()*this.vikingArmy.length)];
+  
+    if (this.saxonArmy.damage === this.vikingArmy.strength){
+      return (this.saxonArmy.receiveDamage(this.vikingArmy.strength));
     }
-    
-    if (Saxon.health <= 0){
-      this.saxonArmy.pop(Saxon);
-    } */
+
+    this.saxonArmy.health <= 0 {
+    this.saxonArmy.shift(this.randomSaxon);
+    }
   }
   
   saxonAttack(){}
-  
   
   showStatus(){
     if (this.saxonArmy.length === 0){
@@ -105,9 +90,6 @@ class War {
       return "Vikings and Saxons are still in the thick of battle.";
     }
   }
-
-}
-
 
 
 
